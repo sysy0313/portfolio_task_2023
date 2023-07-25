@@ -1,0 +1,121 @@
+main {
+    background:url(../images/7598163.jpg) no-repeat fixed;
+    background-size:cover;
+    display:flex; flex-flow:column nowrap; align-items:center;
+    position:relative;
+}
+/* 배경 */
+div.bg2 {
+    width:120%;
+    height:200px;
+    background:url(../images/bg2.png) repeat-x;
+    position:absolute; top:1000px;
+    transform:rotate(-10deg);
+    animation:bg 60s linear infinite;
+}
+div.bg3 {
+    width:120%;
+    height:200px;
+    background:rgba(0,0,0,0.8) url(../images/bg3.png) repeat-x;
+    position:absolute; top:1000px;
+    transform:rotate(10deg);
+    animation:bg 60s linear infinite;
+}
+/* 프로필 */
+main .profile {
+    display:flex; flex-flow:column nowrap; align-items:center;
+} 
+main .profile .photo {
+    margin-top:300px; margin-bottom:30px;
+    width:200px; height:200px; border-radius:50%; overflow:hidden; border:7px solid #fff;
+    animation:top 1s linear alternate infinite;
+    box-shadow:0 0 50px rgba(255,255,255,0.8);
+
+} 
+main .profile .photo img {width:100%;} 
+main .profile .title {
+    font-family: 'Lobster', cursive;
+    font-size:2rem; font-weight:700;
+    margin-bottom:20px;
+} 
+main .profile .roading_box {
+    width:300px; height:10px; border-radius:10px;
+    background:#fff; overflow:hidden;
+    margin-bottom:30px;
+} 
+main .profile .roading_box .bar {
+    height:100%; width:0;
+    background:rgb(255, 0, 255); display:block; 
+    transition:all 2s;
+} 
+/* hover */
+main .profile .photo:hover~.roading_box .bar {
+    width:100%;
+}
+main .profile h2 {
+    font-weight:700; letter-spacing:-0.04em; margin-bottom:30px;
+} 
+/* tool */
+main .profile .tool {margin-bottom:200px;
+    display:flex; flex-flow:row nowrap;} 
+main .profile .tool > a {
+    width:30px; height:30px;
+    display:flex; flex-flow:column nowrap; align-items:center; }
+main .profile .tool .git {margin-right:20px;} 
+main .profile .tool .notion {margin-right:20px;} 
+main .profile .tool .portfolio {background:cadetblue;} 
+/* tool 공통 */
+main .profile .tool img {width:30px; height:30px; margin-bottom:20px;} 
+main .profile .tool span {
+    font-family: 'Lobster', cursive; color:#fff; font-size:1.2rem;
+    background:#000; padding:10px; opacity:0;
+}
+/* tool hover */
+main .profile .tool a:hover span {
+    opacity:1;
+}
+/* menu */
+main .menu {margin-bottom:500px;}
+main .portfolio_list {
+    width:1260px; margin:0 auto;
+    display:flex; flex-flow:row nowrap;
+    margin-bottom:200px;
+}
+main .portfolio_list li {
+    width:calc(25% - 45px / 4);
+    margin-right:15px;
+}
+main .portfolio_list li:last-child {margin-right:0;}
+main .portfolio_list li .item {
+    transition:all 0.5s;
+    width:100%;}
+main .portfolio_list li .item .top {
+    background:url(../images/bg.jpg) no-repeat;
+    height:250px; border-top-left-radius:70px; border-top-right-radius:70px;
+}
+main .portfolio_list li .item .bottom {
+    background:#fff; display:flex; flex-flow:column nowrap; align-items:center; padding:20px 0;
+}
+main .portfolio_list li .item .bottom em {font-weight:700;}
+main .portfolio_list li .item .bottom span:nth-of-type(1) {}
+main .portfolio_list li .item .bottom span:nth-of-type(2) {}
+/* item hover */
+main .portfolio_list li .item:hover .top {}
+main .portfolio_list li .item:hover {
+    filter:drop-shadow(5px 5px 5px rgba(0,0,0,0.7)) 
+}
+main .info {}
+main .info span:nth-child(1) {}
+main .info span:nth-child(2) {}
+
+
+/*키프레임*/
+@keyframes top {
+    0% {transform:translateY(0);}
+
+    100% {transform:translateY(-20px);}
+}
+@keyframes bg {
+    0% {background-position:0 0;}
+    100% {background-position:-5000px 0;}
+}
