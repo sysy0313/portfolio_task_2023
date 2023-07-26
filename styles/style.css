@@ -24,8 +24,6 @@ main .profile {
     display:flex; flex-flow:column nowrap; align-items:center;
 } 
 main .profile .photo {
-    background:url(../images/profile.jpg) 0 30%;
-    background-size:100%; 
     margin:250px 0 20px;
     width:200px; height:200px; border-radius:50%; overflow:hidden; border:7px solid #fff;
     animation:top 1s linear alternate infinite;
