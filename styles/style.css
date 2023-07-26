@@ -10,14 +10,14 @@ div.bg2 {
     background:url(../images/bg2.png) repeat-x;
     position:absolute; top:900px;
     transform:rotate(-10deg);
-    animation:bg 60s linear infinite;
+    animation:bg2 60s linear infinite;
 }
 div.bg3 {
     width:120%; height:200px;
     background:rgba(0,0,0,0.8) url(../images/bg3.png) repeat-x;
     position:absolute; top:900px;
     transform:rotate(10deg);
-    animation:bg 60s linear infinite;
+    animation:bg3 60s linear infinite;
 }
 /* 프로필 */
 main .profile {
@@ -147,9 +147,13 @@ main .info span:nth-child(2) {
 
     100% {transform:translateY(-20px);}
 }
-@keyframes bg {
+@keyframes bg2 {
     0% {background-position:0 0;}
     100% {background-position:-5000px 0;}
+}
+@keyframes bg3 {
+    0% {background-position:0 0;}
+    100% {background-position:5000px 0;}
 }
 @keyframes text_gr {
     0% {background-position-x:0}
